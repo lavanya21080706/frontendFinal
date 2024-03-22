@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    /* justify-content: space-between; */
+}
+
+.navBar {
+    /* position: fixed;
+    top:0; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 6%;
+    background-color: #2E0052;
+    padding: 0% 1rem 0% 1rem;
+    box-sizing: border-box;
+}
+
+
+.contact {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.callicon {
+    width: 2rem;
+    height: 2rem;
+    color: #fff
+}
+
+.number,
+.text,
+.shopNow,
+.line,
+.signUp,
+.login {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.number {
+    padding-left: 0.5rem;
+}
+
+.login,
+.signUp {
+    font-size: 1.1rem;
+}
+
+.line {
+    padding: 0% 0.5rem 0% 0.5rem;
+}
+
+
+.navBarText1,
+.navBarText {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding:0% 0.5rem 0% 0.5rem; */
+}
+
+.navBarText {
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 100%;
+    height:auto;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    box-sizing: border-box;
+}
+
+.music {
+    display: flex;
+    align-items: flex-end;
+}
+
+.musicIcon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.musicartt {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2e0052;
+    padding-left: 0.3rem;
+}
+
+.appName {
+    width: 100%;
+    /* height:10%; */
+    display: flex;
+    align-items: flex-end;
+}
+
+.home {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 0.1rem;
+    align-self: flex-end;
+}
+
+
+.image{
+    width: 100%;
+    height:25vh; 
+    /* min-height: 10rem;   */
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    justify-content: space-between;
+    border: solid 0.1rem linear-gradient(to right, #7286B4, #E794CE);
+    background: linear-gradient(to right, #7286B4, #E794CE);
+}
+
+.imgText{
+    width:40%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    max-lines: 2;
+    padding:1rem 0% 2rem 2rem;
+    color: #2E0052;
+}
+
+.girl{
+    width:auto;
+    /* height:60%; */
+    height:120%;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.searchBar{
+    width:100%;
+    min-height:3rem;
+    display: flex;
+    align-items:center;
+    border-radius: 50px;
+    border: solid 0.2rem #c8c8c8;
+    margin-top:2rem;
+    align-self: stretch; 
+}
+
+.searchIcon{
+    width:2rem;
+    height: 2rem;
+    padding-left:1rem;
+}
+
+.input{
+    border:none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+input:focus {
+    outline: none;
+}
+
+.filter{
+    width:100%;
+    margin-top:1rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width:10%;
+    display: flex;
+    align-items: center;
+}
+
+.gridView{
+    width:2rem;
+    height:2rem;
+}
+
+.listView{
+    width:2.5rem;
+    height:2.5rem;
+}
+
+.dropDownBox{
+    width:80%;
+    display: flex;
+}
+
+.dropDown, .sortBox{
+    background-color: #d9d9d9;
+    border-radius: 50px;
+    width:auto;
+    height:2rem;
+    display: flex;
+    align-items: center;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    margin-left:1rem;
+}
+
+.filtering{
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    display: flex;
+}
+
+.filtering:focus {
+    outline: none;
+}
+
+.company{
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.sortBox{
+    width:10%;
+    justify-content:flex-end  ;
+    /* align-self: flex-end; */
+}
+
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:2rem;
+}
+
+.flexContainerList{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    /* flex-wrap: wrap; */
+    margin-top:2rem;
+}
+
+
+.box {
+    width: 25%; 
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    box-sizing: border-box;
+}
+
+.boxlist{
+    display: flex;
+    width:100%;
+    height:auto;
+    padding:1rem;  
+}
+
+
+.imgBoxList{
+    width:20%;
+    background-color: #D4E5FF;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgBox{
+    width:90%;
+    height:80%;
+    background-color: #D4E5FF;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productImgList{
+    width:75%;
+    height:75%;
+}
+.productImg{
+    width:75%;
+    height:75%;
+}
+
+
+.productName, .price, .color, .type, .description{
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: bold;
+    padding-top:0.5rem;
+}
+
+.productNameList{
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: bold;
+}
+
+.headphnType{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* .hline{
+    align-self: center;
+    justify-self: center;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+} */
+
+.productDetails{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color: #2e0052;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.productDetailsList{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    padding-left:1rem;
+}
+
+.detailsButton{
+    border-radius: 50px;
+    background-color: #2e0052;
+    border: solid 1px #2E0052;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color:#fff;
+    width:7rem;
+    margin-top:0.3rem;
+    padding:0.5rem;
+}
