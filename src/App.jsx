@@ -12,7 +12,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
    <>
-     <BrowserRouter>
+     <BrowserRouter basename="/frontendFinal">
         <Routes>
         <Route path="/" element={<HomePage/> } />
         <Route path="/register" element={<Register />} />
