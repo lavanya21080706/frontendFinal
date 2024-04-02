@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import musicIcon from '../../assets/musicIcon.png'
 import styles from './LoginPage.module.css'
+import { useNavigate } from 'react-router-dom';
+import {login}from '../../../api/auth'
+
 
 function LoginPage() {
     const [isMobile, setIsMobile] = useState(false)
@@ -8,20 +11,54 @@ function LoginPage() {
     const [emailError, setEmailError] = useState(false)
     const [password, setPassword] = useState('')
     const [passwordErr, setPassErr] = useState(false)
-
-    const handleContinue = () => {
-
-        setEmailError(false)
+    const [mobile, setMobile] = useState('');
+    const navigate = useNavigate();
+   
+  
+    const handleContinue = async () => {
+        setEmailError(false);
         setPassErr(false);
-
-        if (email.trim() === '') {
-            setEmailError(true)
+    
+        if (email.trim() === '' && mobile.trim() === '') {
+            setEmailError(true);
+           
         }
+    
         if (password.trim() === '') {
-            setPassErr(true)
+            setPassErr(true);
+            return;
         }
-    }
+    
+        let data = {};
+        if (email.trim() !== '') {
+            // Check if email is valid
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.trim())) {
+                data = { ...data, email: email }; // Include email if provided
+            } else {
+                data = { ...data, mobile: email }; // If not email, treat as mobile number
+            }
+        }
+        if (mobile.trim() !== '') {
+            data = { ...data, mobile: mobile }; // Include mobile if provided
+        }
+        data = { ...data, password: password };
+    
+        console.log(`Data: ${JSON.stringify(data)}`);
+    
+        const response = await login(data);
+        if (response && response.success) {
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('username', response.name);
+            navigate('/');
+          } else {
+            // Handle unsuccessful login (optional)
+            console.log("Login unsuccessful:", response ? response.errorMessage : "Response is undefined");
+          }
+        
+      };
 
+    
+    
 
     useEffect(() => {
         const handleResize = () => {
@@ -35,6 +72,9 @@ function LoginPage() {
             window.removeEventListener('resize', handleResize);
         }
     }, []);
+    const Register_navigation =()=>{
+        navigate('/register')
+    }
     return (
         <div className={styles.loginContainer}>
             <div className={styles.content}>
@@ -66,11 +106,11 @@ function LoginPage() {
                     <div className={styles.line}/>
                 </div>
 
-                <button className={styles.registerButton}>Create your Musicart account</button>
+                <button className={styles.registerButton}onClick={Register_navigation}> Create your Musicart account</button>
             </div>
             <div className={styles.footer}>
                 <p className={styles.footerText}>Musicart | All rights reserved</p>
-            </div>
+            </div>  
 
         </div>
     )
